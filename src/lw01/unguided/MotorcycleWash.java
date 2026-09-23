@@ -1,4 +1,3 @@
-
 public class MotorcycleWash extends WashService {
 
     public MotorcycleWash(String id, int days) {

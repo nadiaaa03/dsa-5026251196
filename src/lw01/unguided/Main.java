@@ -10,7 +10,7 @@ public class Main {
 
         int totalRecords = scanner.nextInt();
 
-        WashService[] rentals = new WashService[totalRecords];
+        WashService[] services = new WashService[totalRecords];
 
         for (int i = 0; i < totalRecords; i++) {
 
@@ -20,18 +20,18 @@ public class Main {
             int units = scanner.nextInt();
 
             if (type.equals("MOTORCYCLE")) {
-                rentals[i] = new MotorcycleWash(id, days);
+                services[i] = new MotorcycleWash(id, days);
             } else if (type.equals("CAR")) {
-                rentals[i] = new CarWash(id, days);
+                services[i] = new CarWash(id, days);
             }
 
-            rentals[i].calculateCharge(units);
+            services[i].calculateCharge(units);
         }
 
         scanner.close();
 
-        for (WashService rental : rentals) {
-            System.out.println(rental.summary());
+        for (WashService service : services) {
+            System.out.println(service.summary());
         }
     }
 }
