@@ -126,8 +126,9 @@ public class Main {
                 }
             }
 
-            int stock = Integer.parseInt(selectedBook[1]);
-            int borrowed = Integer.parseInt(selectedMember[1]);
+            int dishStock = Integer.parseInt(selectedSide_Dish[1]);
+            int drinkStock = Integer.parseInt(selectedDrink[1]);
+            int cust = Integer.parseInt(selectedCustomer[1]);
 
             if ((side_dish.equals("-") || side_dishAvailable) && (drink.equals("-") || drinkAvailable)) {
                 if (!side_dish.equals("-")) reduceStock(side_dishes, side_dish);
